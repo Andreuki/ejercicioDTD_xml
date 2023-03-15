@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca [
+  <!ELEMENT biblioteca (bibliotecarios+,literatura,informatica,ciencias,socios)>
+<!ATTLIST biblioteca codigo CDATA #REQUIRED>
+<!ELEMENT bibliotecarios (bibliotecario+)>
+<!ELEMENT bibliotecario (nombre,apellido,telefono,email)>
+<!ATTLIST bibliotecario empleadoID CDATA #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT apellido (#PCDATA)>
+<!ELEMENT telefono (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+<!ELEMENT literatura (libro+)>
+<!ATTLIST literatura codigo CDATA #REQUIRED>
+<!ELEMENT informatica (libro+)>
+<!ATTLIST informatica codigo CDATA #REQUIRED>
+<!ELEMENT ciencias (libro+)>
+<!ATTLIST ciencias codigo CDATA #REQUIRED>
+<!ELEMENT libro (autores,ejemplares,titulo)>
+<!ELEMENT autores (autor+)>
+<!ELEMENT autor (#PCDATA)>
+<!ELEMENT ejemplares (#PCDATA)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT socios (abonado, ocasional)>
+<!ELEMENT abonado (nombre,apellido,email)>
+<!ATTLIST abonado id_socio CDATA #REQUIRED 
+  tipo CDATA #REQUIRED>
+<!ELEMENT ocasional (nombre, apellido, email)>
+<!ATTLIST ocasional tipo CDATA #REQUIRED>
+]>
+<biblioteca codigo="Alicante">
+  <bibliotecarios>
+    <bibliotecario empleadoID="1">
+      <nombre>Jose</nombre>
+      <apellido>García</apellido>
+      <telefono>645 894 235</telefono>
+      <email>hdkjfgsf@gmail.com</email>
+    </bibliotecario>
+    <bibliotecario empleadoID="2">
+      <nombre>Estrella</nombre>
+      <apellido>Dam</apellido>
+      <telefono>675 497 237</telefono>
+      <email>hdkjfgsf@gmail.com</email>
+    </bibliotecario>
+  </bibliotecarios>
+  <literatura codigo="l1">
+    <libro>
+      <autores>
+        <autor>Miguel de Cervantes</autor>
+      </autores>
+      <ejemplares>100</ejemplares>
+      <titulo>Don Quijote</titulo>
+    </libro>
+  </literatura>
+  <informatica codigo="I2">
+    <libro>
+      <autores>
+        <autor>Ricardo de Querol</autor>
+      </autores>
+      <ejemplares>45</ejemplares>
+      <titulo>La gran fragmentación</titulo>
+    </libro>
+  </informatica>
+  <ciencias codigo="C3">
+    <libro>
+      <autores>
+        <autor>Jaume Franquesa</autor>
+      </autores>
+      <ejemplares>60</ejemplares>
+      <titulo>Molinos y gigantes </titulo>
+    </libro>
+  </ciencias>
+  <socios>
+    <abonado id_socio="45789bj" tipo="abonado">
+      <nombre>Paco</nombre>
+      <apellido>Mer</apellido>
+      <email>hdkjfgsf@gmail.com</email>
+    </abonado>
+    <ocasional tipo="ocasional">
+      <nombre>Abre</nombre>
+      <apellido>Latas</apellido>
+      <email>hdkjfgsf@gmail.com</email>
+    </ocasional>
+  </socios>
+</biblioteca>
